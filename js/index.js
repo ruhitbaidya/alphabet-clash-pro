@@ -8,16 +8,21 @@ function play() {
   hideElementById("home-section");
   showElementById("play-ground");
   continueGame();
+  timerStart()
 }
 let lifeSupp = 10;
 let valueresult = 0;
+let timerset = 00;
+let munit = 00;
 function palyAgain(){
     hideElementById("score-section");
     showElementById("play-ground");
     lifeLine(10)
     lifeSupp = 10
     valueresult = 0;
-    displayResult(valueresult)
+    displayResult(valueresult);
+    valueresult = 0;
+    munit = 0;
 }
 
 
@@ -41,5 +46,28 @@ document.addEventListener("keyup", function (e) {
 
 function displaFinialResult(){
     document.getElementById("resultBoard").innerText = 'Your Score ' +  valueresult;
+    clearInterval(()=>{
+      timerStart()
+    })
 }
 lifeLine(10)
+
+// timer
+
+
+function timerStart(){
+  
+  let showTime = document.getElementById("showTimers");
+  setInterval(()=>{
+    timerset = timers();
+    if(timerset <= 9){
+      timerset = "0" + timerset;
+    }
+    if(timerset == 60){
+      munit = munit + 1;
+      timerset = 00;
+    }
+    showTime.innerHTML = `<span>${munit} : ${timerset}</span>`;
+  }, 1000);
+}
+

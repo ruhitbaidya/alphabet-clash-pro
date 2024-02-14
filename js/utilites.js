@@ -28,10 +28,11 @@ function findButtonByIdremove(elementId){
     let element = document.getElementById(elementId);
        element.classList.remove("bg-orange-400");     
 }
-
+let timer = 00;
 function displayResult(result){
     let display = document.getElementById("displayResult");
     display.innerText = result;
+    timer = 00;
 }
 
 function lifeLine(text){
@@ -39,3 +40,11 @@ function lifeLine(text){
     lifeLose.innerText = text;
 }
 
+
+function timers(){
+    if(timer == 60){
+        timer = 00;
+    }
+    timer = timer + 1;    
+    return timer
+}
