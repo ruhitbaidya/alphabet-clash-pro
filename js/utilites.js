@@ -28,16 +28,18 @@ function findButtonByIdremove(elementId){
     let element = document.getElementById(elementId);
        element.classList.remove("bg-orange-400");     
 }
-let timer = 00;
+
 function displayResult(result){
     let display = document.getElementById("displayResult");
     display.innerText = result;
-    timer = 00;
 }
-
+let timer = 00;
 function lifeLine(text){
     let lifeLose = document.getElementById("life");
     lifeLose.innerText = text;
+    if(text == 0){
+        timer = 00;
+    }
 }
 
 
