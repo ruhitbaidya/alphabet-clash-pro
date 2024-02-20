@@ -43,8 +43,10 @@
         </time>
           <div class="">
             <div
-              class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB3] border-[20px] border-[#010313CC] text-center rounded-2xl"
+            id="aboardsDash"
+              class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB3]  border-[20px] border-[#010313CC] text-center rounded-2xl"
             >
+            <!--  -->
               <span
                 class="bg-[#010313CC] inline-block text-white px-[20px] pb-[5px] rounded-br-lg rounded-bl-lg"
                 >Don't watch keyboard while playing...</span
@@ -99,11 +101,14 @@
       </section>
       <section id="score-section" class="score flex justify-center h-screen items-center hidden">
         <div class="scores bg-[#FFFFFF33] text-center p-[30px] rounded-lg space-y-4">
+          <span id="timerShowing" class="py-[10px] px-[20px] font-bold text-white"></span>
           <h4 id="resultBoard" class="text-[64px] text-white">Score : 14</h4>
           <button onclick="palyAgain()" class="py-[10px] px-[32px] bg-white rounded-lg">Play Again</button>
           <p class="text-white">Practice will make you Pro</p>
         </div>
       </section>
+      <audio id="success" src="./music/success.wav"></audio>
+      <audio id="wrong" src="./music/wrong.wav"></audio>
     </main>
     <script src="./js/utilites.js"></script>
     <script src="./js/index.js"></script>

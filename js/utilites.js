@@ -33,20 +33,12 @@ function displayResult(result){
     let display = document.getElementById("displayResult");
     display.innerText = result;
 }
-let timer = 00;
+let timer = 0;
 function lifeLine(text){
     let lifeLose = document.getElementById("life");
     lifeLose.innerText = text;
     if(text == 0){
-        timer = 00;
+        timer = 0;
     }
 }
 
-
-function timers(){
-    if(timer == 60){
-        timer = 00;
-    }
-    timer = timer + 1;    
-    return timer
-}
