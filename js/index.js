@@ -12,8 +12,8 @@ function play() {
 }
 let lifeSupp = 10;
 let valueresult = 0;
-let timerset = 00;
-let munit = 00;
+let timerset = 0;
+let munit = 0;
 function palyAgain(){
     hideElementById("score-section");
     showElementById("play-ground");
@@ -65,7 +65,7 @@ function timerStart(){
     }
     if(timerset == 60){
       munit = munit + 1;
-      timerset = 00;
+      timerset = 0;
     }
     showTime.innerHTML = `<span>${munit} : ${timerset}</span>`;
   }, 1000);
